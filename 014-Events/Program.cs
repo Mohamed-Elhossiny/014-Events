@@ -30,11 +30,11 @@
                 Console.WriteLine($"{stock.Name} : {stock.Price} : {result}");
             };
 
-            stock.ChangeStockPriceBy(0.05m);
+            stock.ChangeStockPriceBy(0.01m);
             stock.ChangeStockPriceBy(-0.02m);
-            stock.ChangeStockPriceBy(0.00m);
+            stock.ChangeStockPriceBy(0.03m);
 
-            #region UN Subscripe
+            #region UN-Subscripe
             ////Here if i want to remove the attention of the event. 
             //stock.OnPriceChanged -= Stock_OnPriceChanged;
 
@@ -90,7 +90,7 @@
         public decimal Price { get => this.price; set => this.price = value; }      //Get And Set the Price
 
 
-        //Constructor used to be called to get the name of the syock and assign it to name field "Private" 
+        //Constructor used to be called to get the name of the stock and assign it to name field "Private" 
         public Stock(string stockname)
         {
             this.name = stockname;
